@@ -1,1 +1,20 @@
-live/TV.txt
+import os
+
+# Replace these with your own GitHub username and repository name
+your_username = "your_username"
+your_repository = "your_repository"
+
+# Replace this with the URL of the repository you want to clone
+original_repo_url = "https://raw.githubusercontent.com/joevess/IPTV/main/iptv.m3u8"
+
+# Clone the original repository to a local directory
+os.system(f"git clone {original_repo_url}")
+
+# Change into the cloned directory
+os.chdir("other_repository")
+
+# Add your repository as a remote
+os.system(f"git remote add origin https://github.com/hdrafyy/live/edit/main/TV.m3u")
+
+# Push the code to your repository
+os.system("git push -u origin master")
