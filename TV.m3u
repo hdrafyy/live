@@ -1,20 +1,20 @@
 import os
 
-# Replace these with your own GitHub username and repository name
+# Replace these with your own GitHub username and repository name 将这些替换为您自己的GitHub用户名和存储库名称
 your_username = "your_username"
 your_repository = "your_repository"
 
-# Replace this with the URL of the repository you want to clone
+# Replace this with the URL of the repository you want to clone 将其替换为要克隆的存储库的URL
 original_repo_url = "https://raw.githubusercontent.com/joevess/IPTV/main/iptv.m3u8"
 
-# Clone the original repository to a local directory
+# Clone the original repository to a local directory 将原始存储库克隆到本地目录
 os.system(f"git clone {original_repo_url}")
 
-# Change into the cloned directory
+# Change into the cloned directory 进入克隆目录
 os.chdir("other_repository")
 
-# Add your repository as a remote
+# Add your repository as a remote 将存储库添加为远程存储库
 os.system(f"git remote add origin https://github.com/hdrafyy/live/edit/main/TV.m3u")
 
-# Push the code to your repository
+# Push the code to your repository 将代码推送到存储库
 os.system("git push -u origin master")
